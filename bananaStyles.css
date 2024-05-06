@@ -1,46 +1,54 @@
 body {
-    background: rgb(133,180,36);
     background: linear-gradient(90deg, rgba(133,180,36,1) 0%, rgba(28,152,28,1) 100%);
+    text-align: center;
     font-family: "Freeman", sans-serif;
 }
-#project {
-    display: grid;
-}
 
-#title {
+.title {
     text-shadow: #FC0 1px 0 6px;
     font-size: 70px;
     color: #f7e97e;
-    font-weight: bold;
-    text-align: center;
     font-weight: 400;
-    font-style: normal;
-    position: relative;
-    top: -40px;
-}
-@media screen and (max-width: 900px) {
-    #title {
-        font-size: 50px;
-        top: -20px;
-    }
 }
 
-#imgBanana {
-    max-width: 400px;
-    width: 90%;
-    height: auto;
+.banana_img {
+    width: 300px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: -50px;
-
-    animation-name: imgAnimation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    margin: auto;
+    animation: imgAnimation 3s infinite;
 }
+
+.text_info {
+    display: flex;
+    text-align: start;
+    margin: 50px;
+    padding: 10px;
+    color: #DED171;
+
+}
+
+.text {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin: 0 50px;
+}
+
+
+.button_link {
+    text-decoration: none;
+    background: #f7e97e;
+    color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
 @keyframes imgAnimation {
-    from {
+    0% {
         transform: scale(1.0);
     }
 
@@ -48,100 +56,47 @@ body {
         transform: scale(1.05);
     }
 
-    to {
+    100% {
         transform: scale(1.0);
     }
 }
+
 @media screen and (max-width: 900px) {
-    #imgBanana {
+    .title {
+        font-size: 50px;
+        font-style: normal;
+    }
+
+    .banana_img {
         max-width: 250px;
         width: 90%;
+     
     }
-}
 
-#text {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 7px 12px;
-    border-radius: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-#text2 {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 7px 12px;
-    border-radius: 20px;
-    margin-right: 50px;
-    margin-left: 50px;
-}
-@media screen and (max-width: 450px) {
-    #text {
-        margin-left: 5%;
-        margin-right: 5%;
+    .button_link {
+        font-size: 16px;
+        
     }
-    #text2 {
-        margin-right: 5%;
-        margin-left: 5%;
+
+    .button_link:hover {
+        background: #e3d674;
     }
-}
 
-#blockText {
-    font-size: 20px;
-    display: flex;
-    padding: 20px;
-    color: #DED171;
-    text-shadow: #FC0 0px 0 1px;
-    font-weight: 400;
-    text-align: justify;
-}
+    .button_link:active {
+        background: #d4c76a;
+    }
 
-@media screen and (max-width: 900px) {
-    #blockText {
-        font-style: normal;
+    .text_info {
         display: block;
-        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        
     }
-    #text {
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-    #text2 {
-        border-top-right-radius: 0px;
-        border-top-left-radius: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-    }
-}
 
-#link {
-    text-shadow: #FC0 0px 0 3px;
-    text-decoration: none;
-    background: #f7e97e;
-    color: black;
-/*    border: 2px solid black;*/
-    border-radius: 10px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    margin-top: 30px;
-    font-size: 20px;
-    padding: 5px 10px;
-}
-@media screen and (max-width: 900px) {
-    #link {
+    .text{
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
         font-size: 16px;
     }
-}
-#link:hover {
-    background: #e3d674;
-}
-#link:active {
-    background: #d4c76a;
 }
