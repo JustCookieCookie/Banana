@@ -25,6 +25,42 @@ body {
     }
 }
 
+#timer, #textYou {
+    text-align: left;
+    font-size: 40px;
+    color: #f7e97e;
+    text-shadow: #FC0 1px 0 4px;
+    margin-left: 10px;
+}
+@media screen and (max-width: 900px) {
+    #timer, #textYou {
+        font-size: 25px;
+        top: 5px;
+        text-align: center;
+    }
+}
+
+#textYou {
+    position: relative;
+    top: -15px;
+    animation-name: textYouAnimation;
+    animation-duration: 3s;
+}
+@keyframes textYouAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 #imgBanana {
     max-width: 400px;
     width: 90%;
@@ -144,4 +180,10 @@ body {
 }
 #link:active {
     background: #d4c76a;
+}
+
+.line {
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 2px solid #7eb84f;
 }
