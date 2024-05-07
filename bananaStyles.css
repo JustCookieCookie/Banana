@@ -29,7 +29,7 @@ body {
     text-align: left;
     font-size: 40px;
     color: #f7e97e;
-    text-shadow: #FC0 1px 0 4px;
+    text-shadow: #FC0 1px 0 2px;
     margin-left: 10px;
 }
 @media screen and (max-width: 900px) {
